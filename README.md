@@ -9,10 +9,13 @@
 [![Disponibilité](https://img.shields.io/badge/Disponibilit%C3%A9-CDI%20Septembre%202026-163A70?style=for-the-badge)](#objectif-professionnel)
 
 ---
+## Stack Principale
 
+Python • PySpark • SQL • Azure Databricks • MLflow • Unity Catalog • Azure OpenAI • RAG • LLM • FastAPI • Streamlit
+---
 ## Présentation
 
-Data Engineer en devenir et actuellement en mission chez **Capgemini (Insight & Data)**, je conçois des solutions robustes autour de la **Data Engineering**, de **Azure Databricks** et de l'**Intelligence Artificielle Générative**.
+Data Engineer spécialisée en Intelligence Artificielle Générative, actuellement en alternance chez Capgemini (Insight & Data), où je contribue au développement et au déploiement de solutions Data & IA à grande échelle.
 
 Mon expertise couvre la mise en place de pipelines data et IA, l'industrialisation de cas d'usage **RAG**, l'intégration de **LLM**, et la conception d'**architectures multi-agents** sur le **Cloud Azure**.
 
@@ -50,7 +53,18 @@ Mon expertise couvre la mise en place de pipelines data et IA, l'industrialisati
 - Streamlit
 
 ---
+## Expérience
 
+### Capgemini | Data Engineer (Alternance)
+📅 Septembre 2025 - Septembre 2026
+
+- Déploiement de solutions GenAI sur Azure Databricks
+- Conception d'architectures RAG et multi-agents
+- Industrialisation de modèles IA avec MLflow
+- Mise en place de pipelines Data Engineering
+- Gouvernance des données avec Unity Catalog
+
+---
 ## Projets Principaux
 
 ### Projet RAISE
@@ -147,6 +161,12 @@ Mon expertise couvre la mise en place de pipelines data et IA, l'industrialisati
 
 ## Certifications & Accréditations
 
+### PIM Implementation Consultant - Intermediate (Syndigo)
+[![Credly Badge](https://img.shields.io/badge/Credly-Verified_Accreditation-FF6B00?style=flat-square&logo=credly&logoColor=white)](https://www.credly.com/badges/55da860c-f963-491f-8770-5570d8233255)
+- **Description** : certification orientée implémentation PIM et gestion de données produits dans un contexte Master Data Management.
+- **Compétences validées** : Master Data Management, PIM implementation, qualité et structuration des données produit.
+- **Lien de vérification** : [PIM Implementation Consultant - Intermediate - Credly](https://www.credly.com/badges/55da860c-f963-491f-8770-5570d8233255)
+
 ### Databricks Fundamentals Accreditation - Databricks Academy (2026)
 ![Databricks](https://img.shields.io/badge/Databricks-Fundamentals-EA3E2C?style=flat-square&logo=databricks&logoColor=white)
 - **Description** : fondamentaux de la plateforme Databricks et de l'approche Lakehouse.
@@ -205,7 +225,8 @@ Mon expertise couvre la mise en place de pipelines data et IA, l'industrialisati
 
 ## Objectif Professionnel
 
-**A la recherche d'un CDI a partir de septembre 2026 dans les domaines Data Engineering, GenAI, IA et Cloud.**
+**🎯 Disponible pour un CDI à partir de septembre 2026 en tant que Data Engineer, GenAI Engineer ou AI Engineer.
+Je souhaite contribuer à la conception et à l'industrialisation de solutions Data & IA à fort impact au sein d'équipes innovantes.**
 
 Je souhaite contribuer a des projets a fort impact au sein d'environnements innovants (Capgemini, Accenture, BNP Paribas, Societe Generale, Airbus et autres acteurs Data & IA), avec une approche orientee valeur metier, excellence technique et industrialisation.
 
@@ -219,5 +240,11 @@ Je souhaite contribuer a des projets a fort impact au sein d'environnements inno
 - Email : kapnangcynthia@gmail.com
 
 ---
+## GitHub Analytics
 
+https://github-readme-stats.vercel.app/api?username=cyndikap&show_icons=true&theme=default
+
+![Top Langs](https://github.vercel.app/api/top-langs/?username=cyndikap&layout=compact
+
+---
 > Merci pour votre visite. N'hesitez pas a me contacter pour echanger autour d'opportunites Data, IA Generative et Cloud.

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs><linearGradient id="g" x1="1" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#163A70"/><stop offset="100%" stop-color="#EA3E2C"/></linearGradient></defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <circle cx="240" cy="315" r="120" fill="#fff" opacity="0.2"/>
+  <circle cx="560" cy="315" r="120" fill="#fff" opacity="0.2"/>
+  <circle cx="880" cy="315" r="120" fill="#fff" opacity="0.2"/>
+  <text x="120" y="160" fill="#FFFFFF" font-size="56" font-family="Inter,Segoe UI,sans-serif" font-weight="700">AELON</text>
+  <text x="120" y="220" fill="#FFFFFF" font-size="30" font-family="Inter,Segoe UI,sans-serif">Plateforme bancaire multi-agents</text>
+</svg>

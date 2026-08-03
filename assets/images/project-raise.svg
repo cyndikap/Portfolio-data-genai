@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#163A70"/><stop offset="100%" stop-color="#EA3E2C"/></linearGradient></defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <rect x="120" y="140" width="960" height="350" rx="24" fill="#0f1420" opacity="0.88"/>
+  <text x="160" y="240" fill="#FFFFFF" font-size="56" font-family="Inter,Segoe UI,sans-serif" font-weight="700">RAISE</text>
+  <text x="160" y="315" fill="#FFFFFF" font-size="30" font-family="Inter,Segoe UI,sans-serif">GenAI • Databricks • MLflow</text>
+</svg>

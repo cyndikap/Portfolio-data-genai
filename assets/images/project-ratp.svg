@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#163A70"/><stop offset="100%" stop-color="#EA3E2C"/></linearGradient></defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <path d="M120 470h960" stroke="#fff" stroke-width="12" opacity="0.35"/>
+  <path d="M120 410h960" stroke="#fff" stroke-width="12" opacity="0.25"/>
+  <path d="M120 350h960" stroke="#fff" stroke-width="12" opacity="0.16"/>
+  <text x="120" y="180" fill="#FFFFFF" font-size="52" font-family="Inter,Segoe UI,sans-serif" font-weight="700">DATA QUALITY IA - RATP</text>
+  <text x="120" y="250" fill="#FFFFFF" font-size="30" font-family="Inter,Segoe UI,sans-serif">Gouvernance • Qualite • Agents IA</text>
+</svg>
