@@ -1,12 +1,10 @@
 # Bonjour, je suis Cynthia Sileu Kapnang 👋
 
-## Data Engineer | GenAI Engineer | Azure Databricks
-
+## Data Engineer | GenAI Engineer | Agentic AI Engineer
 📞 +33 6 25 86 16 89
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Cynthia_Sileu_Kapnang-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/cynthia-sileu-kapnang-7484b4206)
 [![GitHub](https://img.shields.io/badge/GitHub-cyndikap-181717?style=for-the-badge&logo=github)](https://github.com/cyndikap)
-[![Disponibilité](https://img.shields.io/badge/Disponibilit%C3%A9-CDI%20Septembre%202026-163A70?style=for-the-badge)](#objectif-professionnel)
 
 ---
 ## Stack Principale
