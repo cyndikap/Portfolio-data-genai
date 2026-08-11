@@ -1,0 +1,19 @@
+# Local assistant config
+.claude/
+
+# OS / editor artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Logs
+*.log
+
+# Node tooling (if used later)
+node_modules/
+
+# Python tooling (if used later)
+__pycache__/
+*.pyc
+.venv/
+venv/

@@ -11,7 +11,7 @@
 ---
 ## Stack Principale
 
-Python • PySpark • SQL • Azure Databricks • MLflow • Unity Catalog • Azure OpenAI • RAG • LLM • FastAPI • Streamlit
+Python • PySpark • SQL • Apache AIRFLOW • Kafka • DAG • Pipeline ETL • Azure Databricks • MLflow • Unity Catalog • Azure OpenAI • RAG • LLM • FastAPI • Streamlit
 ---
 ## Présentation
 
@@ -29,6 +29,10 @@ Mon expertise couvre la mise en place de pipelines data et IA, l'industrialisati
 - Python
 - PySpark
 - SQL
+- Apache AIRFLOW
+- Kafka
+- DAG
+- Pipeline ETL
 - Azure Databricks
 - MLflow
 - Unity Catalog
@@ -103,6 +107,85 @@ Mon expertise couvre la mise en place de pipelines data et IA, l'industrialisati
 **Compétences mobilisées**
 - GenAI Engineering, API Engineering, architecture applicative, prompt engineering.
 
+**Agents conçus (AELON)**
+
+| Fonction | Business value | Données | Types de données |
+|---|---|---|---|
+| Premier niveau de support: recherche dans la base de connaissances Azure AI Search + mémoire des échanges passés | Résout automatiquement les demandes courantes sans intervention humaine, réduction du coût de support | Oui | Requête utilisateur, chunks Azure AI Search, historique mémoire L0 (`L0_memory.json`) |
+| Diagnostic technique avancé: interrogation des logs via RAG + pilotage du cycle de vie MCP | Traite les cas non résolus par L0 et fournit une analyse technique des incidents | Oui | Contexte d'escalade L0, logs système (RAG/MCP), réponse LLM multilingue |
+| Analyse avant traitement: détection par mots-clés (phishing, OTP, carte) + confirmation LLM | Bloque les tentatives de fraude, phishing et usurpation d'identité en temps réel | Oui | Message utilisateur, patterns de fraude prédéfinis, réponse LLM JSON (`is_fraud`, `risk_level`, `reason`) |
+| Analyse du ton émotionnel (frustration, urgence, colère) avant L0 | Priorise les clients en détresse, adapte le ton de réponse et réduit le churn | Oui | Message utilisateur, score de sentiment (positif, négatif, neutre), niveau d'urgence |
+| Vérification de conformité des réponses générées (RGPD, DORA, PCI-DSS) | Réduit le risque légal et réglementaire et alimente un audit trail automatique | Oui | Réponse générée, règles de conformité, checklist réglementaire |
+| Résumé des problèmes rencontrés + dashboards KPI satisfaction clients | Permet l'amélioration continue de la plateforme côté métier | Oui | Requêtes utilisateurs, temps de réponse, taux de résolution, signaux de satisfaction |
+
+Cette architecture permet de couvrir la qualité de service bout en bout: automatisation L0, sécurité/fraude, diagnostic technique, conformité et pilotage KPI.
+
+**Architecture multi-agents (flux décisionnel)**
+
+```mermaid
+flowchart TD
+	A[Message utilisateur] --> B[Agent anti-fraude]
+	B -->|Risque eleve| X[Blocage et alerte securite]
+	B -->|Risque faible| C[Agent sentiment/urgence]
+	C --> D[Agent L0 Azure AI Search + memoire]
+	D -->|Demande resolue| E[Agent conformite RGPD DORA PCI-DSS]
+	D -->|Non resolu| F[Agent diagnostic technique RAG/MCP]
+	F --> E
+	E --> G[Reponse finale au client]
+	G --> H[Agent reporting KPI satisfaction]
+	X --> H
+```
+
+**AELON - Synthese fonctionnelle et technique**
+
+**Contexte metier**
+- Modernisation du support bancaire pour gerer un volume croissant de demandes clients.
+- Exigence de reponses rapides, personnalisees et fiables, 24/7.
+- Respect obligatoire des contraintes de securite et conformite (RGPD, DORA, PCI-DSS).
+
+**Objectifs du projet**
+- Automatiser le support bancaire sur les demandes recurrentes.
+- Renforcer la detection de fraude et la protection des donnees sensibles.
+- Garantir la conformite reglementaire des reponses generees.
+- Exploiter l'IA generative (Azure OpenAI + RAG) pour des reponses contextualisees.
+- Piloter la performance avec des KPI metier, techniques et IA.
+
+**Acteurs de la plateforme**
+- Clients bancaires (utilisateurs finaux).
+- Equipes metier (pilotage de la qualite de service).
+- Equipes Data & IA (developpement, monitoring, amelioration continue).
+- Agents IA specialises (Privacy, Fraud, Sentiment, L0, L1, Retrieval, Compliance, Explainability, Observability, Analytics, Evaluation).
+
+**Besoins fonctionnels couverts**
+- Support conversationnel bancaire intelligent (comptes, paiements, cartes, incidents).
+- Detection de fraude en amont de tout traitement.
+- Analyse emotionnelle et gestion de l'urgence.
+- Gestion des escalades L0 vers L1 sur les cas complexes.
+- Production de dashboards analytiques pour les equipes metier.
+
+**Besoins non fonctionnels**
+- Securite: anonymisation, controle d'acces, prevention fraude, conformite.
+- Disponibilite: service continu, monitoring, reprise sur incident.
+- Scalabilite: architecture cloud et traitements distribues.
+- Performance: faible latence de reponse et traitement efficace.
+- Maintenabilite: architecture modulaire multi-agents.
+- Gouvernance: tracabilite, auditabilite, explicabilite et supervision continue.
+
+**Architecture Data Engineering (Databricks Lakehouse)**
+- Bronze: donnees brutes (conversations, logs, evenements, sorties agents).
+- Silver: donnees nettoyees, anonymisees et enrichies (fraude, sentiment, urgence, categories).
+- Gold: indicateurs agreges pour dashboards et decision.
+- Delta Lake: versioning, historisation, controle qualite, audit.
+- PySpark: nettoyage, enrichissement, agregations, traitements distribues.
+
+**KPI suivis**
+- KPI clients: volume interactions, satisfaction, repartition des sentiments, categories de demandes.
+- KPI agents: taux de resolution, taux d'escalade, performance par agent, volume traite.
+- KPI securite: fraudes detectees, score de risque moyen, alertes.
+- KPI IA: quality score, temps moyen de reponse, taux de conformite, explicabilite.
+
+Cette synthese formalise les chapitres metier, architecture et gouvernance d'AELON dans un format directement exploitable dans le portfolio.
+
 ### Projet SAV GENIA
 **Objectif**
 - Créer une plateforme d'évaluation fiable des agents IA pour piloter la qualité des réponses.
@@ -120,6 +203,46 @@ Mon expertise couvre la mise en place de pipelines data et IA, l'industrialisati
 
 **Compétences mobilisées**
 - Evaluation Frameworks, GenAI Quality, data storytelling, développement d'outils analytiques.
+
+**Module développé : EVALUATION AGENTS GENIA-SAV**
+- Mise en place du pipeline du module d'évaluation.
+- Structuration des composants d'évaluation techniques et métier.
+
+**Structure du module d'évaluation**
+
+| Fichier | Rôle | Observation |
+|---|---|---|
+| `evaluation_dataset.json` | Contient les questions de test. | Jeu de cas utilisé pour la comparaison des réponses. |
+| `build_payload.py` | Crée l'objet envoyé aux juges. | Prépare les entrées standardisées pour tous les évaluateurs. |
+| `llm_judge.py` | Mesure la qualité de la réponse. | Mesures : exactitude, complétude, absence d'erreur (LLM-as-a-Judge / correctness). |
+| `business_judge.py` | Vérifie l'exploitabilité métier de la réponse. | Exemple "Carte perdue" : la réponse doit couvrir opposition et renouvellement, sinon score faible. |
+| `ragas_eval.py` | Mesure la qualité du retrieval. | Métriques recommandées : faithfulness, context recall, context precision. |
+| `run_evaluation.py` | Orchestre toute l'évaluation. | Lance la chaîne complète du module. |
+| `evaluation_results.json` | Sauvegarde les scores. | Résultats consolidés pour analyse. |
+| `dashboard.py` | Affiche les KPI avec Streamlit. | Suivi visuel des performances du module. |
+
+Ces métriques sont alignées avec l'approche du document `Pipeline_Evaluation_RAG` et permettent d'évaluer à la fois la qualité de la réponse, la qualité du retrieval et la pertinence métier.
+
+**Vérification du module évaluation (PowerShell)**
+
+```powershell
+python .\run_evaluation.py
+```
+
+**Architecture du module évaluation**
+
+```mermaid
+flowchart LR
+	A[evaluation_dataset.json] --> B[build_payload.py]
+	B --> C[run_evaluation.py]
+	C --> D[llm_judge.py]
+	C --> E[business_judge.py]
+	C --> F[ragas_eval.py]
+	D --> G[evaluation_results.json]
+	E --> G
+	F --> G
+	G --> H[dashboard.py Streamlit KPI]
+```
 
 ### Projet Data Quality IA - RATP
 **Objectif**
@@ -192,10 +315,10 @@ Mon expertise couvre la mise en place de pipelines data et IA, l'industrialisati
 - **Description** : bases du cloud public et des services data GCP.
 - **Compétences validées** : culture cloud, principes d'architecture, services managés.
 
-### ETL and Data Pipelines with Shell, Airflow and Kafka
+### ETL and Data Pipelines with Shell, Apache AIRFLOW and Kafka
 ![ETL Pipelines](https://img.shields.io/badge/ETL-Shell_Airflow_Kafka-FF6F00?style=flat-square&logo=apacheairflow&logoColor=white)
 - **Description** : construction de pipelines ETL orchestrés et résilients.
-- **Compétences validées** : orchestration Airflow, flux Kafka, automatisation shell.
+- **Compétences validées** : orchestration Apache AIRFLOW, flux Kafka, automatisation shell.
 
 ### Hackathon Anthropic - Claude AI
 ![Anthropic](https://img.shields.io/badge/Hackathon-Anthropic_Claude_AI-111111?style=flat-square&logo=anthropic&logoColor=white)
@@ -209,6 +332,10 @@ Mon expertise couvre la mise en place de pipelines data et IA, l'industrialisati
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![PySpark](https://img.shields.io/badge/PySpark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
+![Apache AIRFLOW](https://img.shields.io/badge/Apache_Airflow-017CEE?style=for-the-badge&logo=apacheairflow&logoColor=white)
+![Kafka](https://img.shields.io/badge/Kafka-231F20?style=for-the-badge&logo=apachekafka&logoColor=white)
+![DAG](https://img.shields.io/badge/DAG-Orchestration-334155?style=for-the-badge)
+![Pipeline ETL](https://img.shields.io/badge/Pipeline_ETL-FF6F00?style=for-the-badge)
 ![Azure Databricks](https://img.shields.io/badge/Azure_Databricks-EA3E2C?style=for-the-badge&logo=databricks&logoColor=white)
 ![MLflow](https://img.shields.io/badge/MLflow-0194E2?style=for-the-badge&logo=mlflow&logoColor=white)
 ![Unity Catalog](https://img.shields.io/badge/Unity_Catalog-163A70?style=for-the-badge)
@@ -225,7 +352,7 @@ Mon expertise couvre la mise en place de pipelines data et IA, l'industrialisati
 
 ## Objectif Professionnel
 
-**🎯 Disponible pour un CDI à partir de septembre 2026 en tant que Data Engineer, GenAI Engineer ou AI Engineer.
+**🎯 En tant que Data Engineer, GenAI Engineer ou AI Engineer.
 Je souhaite contribuer à la conception et à l'industrialisation de solutions Data & IA à fort impact au sein d'équipes innovantes.**
 
 Je souhaite contribuer a des projets a fort impact au sein d'environnements innovants (Capgemini, Accenture, BNP Paribas, Societe Generale, Airbus et autres acteurs Data & IA), avec une approche orientee valeur metier, excellence technique et industrialisation.
