@@ -282,11 +282,11 @@ flowchart LR
 
 ## Certifications & Accréditations
 
-### PIM Implementation Consultant - Intermediate (Syndigo)
-[![Credly Badge](https://img.shields.io/badge/Credly-Verified_Accreditation-FF6B00?style=flat-square&logo=credly&logoColor=white)](https://www.credly.com/badges/55da860c-f963-491f-8770-5570d8233255)
+### Syndigo Product Information Management (PIM) & Master Data Management (MDM)
+[![Credly Badge](https://img.shields.io/badge/Credly-Verified_Accreditation-FF6B00?style=flat-square&logo=credly&logoColor=white)](https://www.credly.com/badges/55da860c-f963-491f-8770-5570d8233255/linked_in_profile)
 - **Description** : certification orientée implémentation PIM et gestion de données produits dans un contexte Master Data Management.
-- **Compétences validées** : Master Data Management, PIM implementation, qualité et structuration des données produit.
-- **Lien de vérification** : [PIM Implementation Consultant - Intermediate - Credly](https://www.credly.com/badges/55da860c-f963-491f-8770-5570d8233255)
+- **Compétences associées** : Master Data Management, Gestion d'informations sur les produits, Data Quality, Gouvernance de données, Gestion des données, Référentiels de données, Data Catalog.
+- **Lien de vérification** : [Syndigo PIM & MDM - Credly](https://www.credly.com/badges/55da860c-f963-491f-8770-5570d8233255/linked_in_profile)
 
 ### Databricks Fundamentals Accreditation - Databricks Academy (2026)
 ![Databricks](https://img.shields.io/badge/Databricks-Fundamentals-EA3E2C?style=flat-square&logo=databricks&logoColor=white)
@@ -317,6 +317,8 @@ flowchart LR
 ![ETL Pipelines](https://img.shields.io/badge/ETL-Shell_Airflow_Kafka-FF6F00?style=flat-square&logo=apacheairflow&logoColor=white)
 - **Description** : construction de pipelines ETL orchestrés et résilients.
 - **Compétences validées** : orchestration Apache AIRFLOW, flux Kafka, automatisation shell.
+- **Lien de vérification (Coursera)** : [ETL and Data Pipelines with Shell, Airflow and Kafka](https://www.coursera.org/account/accomplishments/records/2GFU5TPESBXX)
+- **Lien de vérification (Credly)** : [ETL and Data Pipelines with Shell, Airflow and Kafka](https://www.credly.com/badges/497d0eb6-e074-43f1-a06d-18119955b27d/linked_in_profile)
 
 ### Hackathon Anthropic - Claude AI
 ![Anthropic](https://img.shields.io/badge/Hackathon-Anthropic_Claude_AI-111111?style=flat-square&logo=anthropic&logoColor=white)
