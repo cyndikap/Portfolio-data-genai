@@ -192,12 +192,13 @@ Cette synthese formalise les chapitres metier, architecture et gouvernance d'AEL
 - Évaluer objectivement la performance de systèmes GenAI avec des métriques techniques et métier.
 
 **Technologies**
-- LLM-as-a-Judge, Business Judge, RAGAS, Streamlit, Python.
+- LLM-as-a-Judge, Business Judge, RAGAS, Streamlit, Python, Azure Blob Storage, Azure Knowledge Base.
 
 **Résultats obtenus**
 - Industrialisation d'un pipeline d'évaluation multi-critères.
 - Clarification des axes d'amélioration des prompts et des agents.
 - Meilleure comparabilité des versions de systèmes IA.
+- Création et connexion de la knowledge base Azure à partir de blobs Azure pour fiabiliser le retrieval.
 
 **Compétences mobilisées**
 - Evaluation Frameworks, GenAI Quality, data storytelling, développement d'outils analytiques.
@@ -205,6 +206,7 @@ Cette synthese formalise les chapitres metier, architecture et gouvernance d'AEL
 **Module développé : EVALUATION AGENTS GENIA-SAV**
 - Mise en place du pipeline du module d'évaluation.
 - Structuration des composants d'évaluation techniques et métier.
+- Création de la knowledge base Azure et connexion aux données stockées dans Azure Blob Storage.
 
 **Structure du module d'évaluation**
 
@@ -312,6 +314,7 @@ flowchart LR
 ![Google Cloud](https://img.shields.io/badge/Google_Cloud-Fundamentals-4285F4?style=flat-square&logo=googlecloud&logoColor=white)
 - **Description** : bases du cloud public et des services data GCP.
 - **Compétences validées** : culture cloud, principes d'architecture, services managés.
+- **Lien de vérification** : [Coursera - Google Cloud Fundamentals: Core Infrastructure](https://www.coursera.org/account/accomplishments/records/VOO1AUL6XQVU)
 
 ### ETL and Data Pipelines with Shell, Apache AIRFLOW and Kafka
 ![ETL Pipelines](https://img.shields.io/badge/ETL-Shell_Airflow_Kafka-FF6F00?style=flat-square&logo=apacheairflow&logoColor=white)
