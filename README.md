@@ -74,33 +74,45 @@ Mon expertise couvre la mise en place de pipelines data et IA, l'industrialisati
 - Industrialiser des cas d'usage conversationnels GenAI pour accélérer l'accès à l'information et améliorer la productivité.
 
 **Problématique**
-- Passer d'un prototype IA à une solution scalable, traçable et gouvernée.
+- Garantir la reproductibilité et la scalabilité des déploiements de modèles GenAI en environnement multi-cloud, tout en évitant les redondances et en maintenant une gouvernance robuste.
+
+**Description scientifique / technique**
+- Le projet a visé à formaliser un framework d'orchestration automatisée capable de standardiser le déploiement multi-cloud de modèles GenAI à travers un pipeline en six étapes : setup/initialize, register, deploy, integration test, proxy register et evaluate.
+- Cette approche a été validée dans un environnement Databricks sur plusieurs typologies de modèles : transformation d'images, assistants conversationnels et générateurs de contenu.
+- L'objectif était de s'affranchir des adaptations manuelles propres à chaque fournisseur cloud tout en conservant un niveau de performance et de reproductibilité compatible avec un usage industriel.
 
 **Technologies**
-- Azure Databricks, MLflow, Unity Catalog, Model Serving, Python, RAG, LLM.
+- Azure Databricks, MLflow, Unity Catalog, Model Serving, Python, RAG, LLM, orchestration de déploiement.
 
 **Résultats obtenus**
 - Déploiement de chatbots GenAI en environnement maîtrisé.
 - Amélioration de la traçabilité des modèles et des versions.
 - Renforcement de la gouvernance des actifs data & IA.
+- Validation expérimentale de la standardisation du cycle de vie de modèles GenAI hétérogènes.
 
 **Compétences mobilisées**
 - Data Engineering, MLOps, GenAI Ops, gouvernance data, architecture cloud.
 
 ### Projet AELON
 **Objectif**
-- Concevoir une plateforme bancaire multi-agents orientée assistance métier et recherche de connaissances.
+- Concevoir une plateforme bancaire intelligente en 3 espaces, pensée pour offrir une expérience premium et cloisonnée selon les profils utilisateurs.
 
 **Problématique**
-- Orchestrer plusieurs agents IA spécialisés tout en conservant performance, fiabilité et sécurité.
+- Orchestrer plusieurs agents IA spécialisés tout en conservant performance, fiabilité, sécurité et conformité dans un contexte bancaire sensible.
+
+**Description fonctionnelle et technique**
+- Customer Banking Assistant pour le client bancaire, Analytics Copilot pour le Business Analyst, et AI Governance Copilot pour le Data Steward.
+- Backend FastAPI compatible avec les routes existantes, front web moderne et orchestrateur multi-agent.
+- Masquage des données sensibles dans le chat client, avec exploitation des interactions dans les espaces Analytics et Governance pour générer KPI, tableaux de bord exécutifs, exports CSV/PDF et indicateurs d'observabilité.
 
 **Technologies**
-- Azure OpenAI, RAG, FastAPI, Python, architecture multi-agents.
+- Azure OpenAI, RAG, FastAPI, Python, architecture multi-agents, observabilité IA, dashboards métier.
 
 **Résultats obtenus**
 - Mise en place d'une architecture modulaire d'agents.
 - Meilleure précision des réponses via contextualisation RAG.
 - Accélération de la conception de cas d'usage IA côté métier.
+- Meilleure gouvernance, sécurité et traçabilité des interactions.
 
 **Compétences mobilisées**
 - GenAI Engineering, API Engineering, architecture applicative, prompt engineering.
@@ -246,18 +258,24 @@ flowchart LR
 
 ### Projet Data Quality IA - RATP
 **Objectif**
-- Automatiser des contrôles de qualité des données avec des agents IA dédiés à la gouvernance.
+- Automatiser les contrôles de qualité des données avec des agents IA dédiés à la gouvernance et à la fiabilisation des usages data métiers.
 
 **Problématique**
-- Réduire la détection tardive des anomalies et fiabiliser les usages data métiers.
+- Réduire la détection tardive des anomalies et renforcer la confiance dans les jeux de données critiques.
+
+**Description fonctionnelle et technique**
+- Conception d'agents IA spécialisés dans la détection d'anomalies, le respect des règles métier et la supervision continue des données.
+- Couplage de règles de qualité, transformations PySpark et observabilité métier pour fournir un niveau de gouvernance plus robuste.
+- Contribution à une meilleure utilisation des données à forte criticité et à une meilleure réponse opérationnelle aux écarts détectés.
 
 **Technologies**
-- Python, PySpark, Azure Databricks, agents IA, règles de qualité des données.
+- Python, PySpark, Azure Databricks, agents IA, règles de qualité des données, gouvernance data.
 
 **Résultats obtenus**
 - Détection plus rapide des anomalies critiques.
 - Structuration des règles de gouvernance data.
 - Contribution à une meilleure confiance dans les jeux de données.
+- Meilleure capacité à sécuriser les usages analytiques et décisionnels.
 
 **Compétences mobilisées**
 - Data Quality, Data Governance, Data Engineering, IA appliquée.
@@ -283,6 +301,13 @@ flowchart LR
 ---
 
 ## Certifications & Accréditations
+
+### PIM Implementation Consultant - Practitioner
+[![Credly Badge](https://img.shields.io/badge/Credly-PIM_Implementation_Consultant-FF6B00?style=flat-square&logo=credly&logoColor=white)](https://www.credly.com/badges/586fdcbf-1f6f-42bb-89c7-d8b9e775817a/public_url)
+- **Description** : au cours de cette formation et de ses assessments pratiques, j’ai eu l’opportunité de travailler sur l’ensemble des composantes d’une plateforme de Product Information Management (PIM) et de Master Data Management (MDM) : modélisation des données, workflows, intégrations, APIs REST, reporting et gouvernance.
+- **Composants abordés** : modélisation des entités métier (Article, Choice, Style), création d’attributs, relations et taxonomies, mise en place des variantes et structures de données produit, configuration des workflows de création et d’enrichissement, règles métier et contrôles qualité, personnalisation de l’interface utilisateur, intégrations SFTP, AWS Kinesis et Azure Event Hub, APIs Syndigo via Postman, ainsi que dashboards de gouvernance et reporting analytique.
+- **Compétences associées** : Product Information Management, Master Data Management, Data Governance, Data Quality, REST APIs, Data Integration, Workflow Automation, Reporting & Analytics.
+- **Lien de vérification** : [PIM Implementation Consultant - Practitioner - Credly](https://www.credly.com/badges/586fdcbf-1f6f-42bb-89c7-d8b9e775817a/public_url)
 
 ### Syndigo Product Information Management (PIM) & Master Data Management (MDM)
 [![Credly Badge](https://img.shields.io/badge/Credly-Verified_Accreditation-FF6B00?style=flat-square&logo=credly&logoColor=white)](https://www.credly.com/badges/55da860c-f963-491f-8770-5570d8233255/linked_in_profile)

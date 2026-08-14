@@ -9,6 +9,9 @@ Thumbs.db
 # Logs
 *.log
 
+# Office temp files
+~$*
+
 # Node tooling (if used later)
 node_modules/
 
