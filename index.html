@@ -14,7 +14,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="90" tabindex="0">
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="90" tabindex="0" data-ask-ai-endpoint="http://localhost:8000/chat">
 
   <nav id="mainNav" class="navbar navbar-expand-lg navbar-light fixed-top glass-nav">
     <div class="container">
@@ -828,6 +828,51 @@
         <div class="modal-body">Prototype d'assistant de recommandation automobile avec Claude, axe sur la personnalisation et la qualite conversationnelle.</div>
       </div>
     </div>
+  </div>
+
+  <div class="ask-cynthia-ai" id="askCynthiaAI" aria-live="polite">
+    <button class="ask-ai-launcher" id="askAiLauncher" type="button" aria-label="Ouvrir Ask Cynthia AI" aria-expanded="false" aria-controls="askAiPanel">
+      <span class="ask-ai-launcher-icon" aria-hidden="true">🤖</span>
+      <span class="ask-ai-launcher-copy">
+        <strong>Ask Cynthia AI</strong>
+        <small>Decouvrez mon parcours grace a l'IA</small>
+      </span>
+    </button>
+
+    <section class="ask-ai-panel" id="askAiPanel" aria-label="Assistant Ask Cynthia AI" aria-hidden="true">
+      <header class="ask-ai-header">
+        <div>
+          <h4>🤖 Ask Cynthia AI</h4>
+          <p>Votre assistant pour decouvrir mon parcours Data &amp; IA.</p>
+        </div>
+        <button class="ask-ai-close" id="askAiClose" type="button" aria-label="Fermer le chat">
+          <i class="bi bi-x-lg" aria-hidden="true"></i>
+        </button>
+      </header>
+
+      <div class="ask-ai-body" id="askAiBody"></div>
+
+      <div class="ask-ai-suggestions" id="askAiSuggestions">
+        <button type="button" class="ask-ai-chip">💡 Pourquoi recruter Cynthia ?</button>
+        <button type="button" class="ask-ai-chip">🚀 Quels sont ses projets IA ?</button>
+        <button type="button" class="ask-ai-chip">☁️ Quelle est son experience Databricks ?</button>
+        <button type="button" class="ask-ai-chip">🤖 A-t-elle travaille sur le RAG et les LLM ?</button>
+        <button type="button" class="ask-ai-chip">📜 Quelles certifications possede-t-elle ?</button>
+        <button type="button" class="ask-ai-chip">🎯 Quelle est sa valeur ajoutee ?</button>
+        <button type="button" class="ask-ai-chip">🏛️ Quelle est son expertise en Data Governance ?</button>
+        <button type="button" class="ask-ai-chip">📄 Consulter son CV</button>
+      </div>
+
+      <form class="ask-ai-input-wrap" id="askAiForm" autocomplete="off">
+        <label for="askAiInput" class="visually-hidden">Votre question</label>
+        <input id="askAiInput" class="ask-ai-input" type="text" placeholder="Posez votre question sur mon parcours, mes projets ou mes certifications..." maxlength="280">
+        <button type="submit" class="ask-ai-send" aria-label="Envoyer">
+          <i class="bi bi-send-fill" aria-hidden="true"></i>
+        </button>
+      </form>
+
+      <footer class="ask-ai-footer">Powered by Ask Cynthia AI • Built with GenAI</footer>
+    </section>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
