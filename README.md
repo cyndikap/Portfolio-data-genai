@@ -392,6 +392,7 @@ Je souhaite contribuer a des projets a fort impact au sein d'environnements inno
 - Téléphone : +33 6 25 86 16 89
 - LinkedIn : [linkedin.com/in/cynthia-sileu-kapnang-7484b4206](https://www.linkedin.com/in/cynthia-sileu-kapnang-7484b4206)
 - GitHub : [github.com/cyndikap](https://github.com/cyndikap)
+- Portfolio :https://cyndikap.github.io/Portfolio-data-genai/
 - Email : kapnangcynthia@gmail.com
 
 ---
