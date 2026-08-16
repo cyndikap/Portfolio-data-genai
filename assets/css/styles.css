@@ -35,6 +35,35 @@ a:hover {
   color: var(--primary);
 }
 
+.ask-ai-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ask-ai-new-chat {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.45rem 0.8rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.ask-ai-new-chat:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.ask-ai-new-chat:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.6);
+  outline-offset: 2px;
+}
+
 .section-space {
   padding: 5.5rem 0;
 }

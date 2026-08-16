@@ -50,6 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const askAiForm = document.getElementById("askAiForm");
   const askAiInput = document.getElementById("askAiInput");
   const askAiSuggestions = document.getElementById("askAiSuggestions");
+  const askAiNewChat = document.getElementById("askAiNewChat");
 
   if (!askAiRoot || !askAiLauncher || !askAiPanel || !askAiClose || !askAiBody || !askAiForm || !askAiInput || !askAiSuggestions) {
     return;
@@ -58,21 +59,30 @@ document.addEventListener("DOMContentLoaded", () => {
   const storageKey = "ask-cynthia-ai-history";
   const askAiEndpoint = (document.body.dataset.askAiEndpoint || window.ASK_CYNTHIA_AI_ENDPOINT || "").trim();
   const welcomeMessage = [
-    "Bonjour 👋",
+    "👋 Bonjour !",
     "",
     "Je suis Ask Cynthia AI.",
     "",
-    "Je peux vous presenter :",
+    "Je peux vous parler :",
     "",
-    "✅ Mon parcours professionnel",
-    "✅ Mes projets Data & IA",
-    "✅ Mes competences techniques",
-    "✅ Mes certifications",
-    "✅ Mon experience Azure Databricks",
-    "✅ Ma vision du Data Engineering et de l'IA",
-    "✅ La personne derriere l'engineer: valeurs, aspirations et facon de travailler",
+    "🚀 De mes projets",
+    "🏆 De mes certifications",
+    "💻 De mes compétences",
+    "☁️ De mon expérience Databricks",
     "",
-    "Que souhaitez-vous savoir ?"
+    "mais aussi :",
+    "",
+    "💬 De mes valeurs",
+    "🌱 De mes passions",
+    "🚀 De mes ambitions",
+    "🌟 De mes inspirations",
+    "❤️ De la personne que je suis",
+    "",
+    "Un profil ne se résume pas uniquement à ce qu'il sait faire.",
+    "",
+    "Il raconte aussi qui il est.",
+    "",
+    "Que souhaitez-vous découvrir ?"
   ].join("\n");
 
   const profile = {
@@ -156,17 +166,50 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
+  const renderWelcomeMessage = () => {
+    askAiBody.innerHTML = "";
+    createMessage("assistant", welcomeMessage, { persist: true });
+    scrollToBottom();
+  };
+
+  const flashResetMessage = () => {
+    askAiBody.innerHTML = "";
+    createMessage("assistant", "✨ Nouvelle conversation créée", { persist: false });
+    scrollToBottom();
+
+    window.setTimeout(() => {
+      const lastAssistantMessage = askAiBody.querySelector(".ask-ai-message.assistant:last-child");
+      if (lastAssistantMessage) {
+        lastAssistantMessage.remove();
+      }
+
+      renderWelcomeMessage();
+    }, 500);
+  };
+
+  const resetConversation = () => {
+    askAiInput.value = "";
+    localStorage.removeItem(storageKey);
+    sessionStorage.removeItem(storageKey);
+
+    if (window.__ASK_CYNTHIA_CONTEXT__) {
+      delete window.__ASK_CYNTHIA_CONTEXT__;
+    }
+
+    flashResetMessage();
+  };
+
   const loadHistory = () => {
     const raw = localStorage.getItem(storageKey);
     if (!raw) {
-      createMessage("assistant", welcomeMessage, { persist: true });
+      renderWelcomeMessage();
       return;
     }
 
     try {
       const history = JSON.parse(raw);
       if (!Array.isArray(history) || history.length === 0) {
-        createMessage("assistant", welcomeMessage, { persist: true });
+        renderWelcomeMessage();
         return;
       }
 
@@ -180,7 +223,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       saveHistory();
     } catch (_error) {
-      createMessage("assistant", welcomeMessage, { persist: true });
+      renderWelcomeMessage();
     }
   };
 
@@ -318,6 +361,8 @@ document.addEventListener("DOMContentLoaded", () => {
     askAiPanel.setAttribute("aria-hidden", "true");
     askAiLauncher.setAttribute("aria-expanded", "false");
   });
+
+  askAiNewChat.addEventListener("click", resetConversation);
 
   askAiForm.addEventListener("submit", (event) => {
     event.preventDefault();
