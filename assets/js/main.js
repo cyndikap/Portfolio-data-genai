@@ -60,7 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const askAiEndpoint = (document.body.dataset.askAiEndpoint || window.ASK_CYNTHIA_AI_ENDPOINT || "").trim();
   const welcomeMessage = [
     "👋 Bonjour !",
-    "",
     "Je suis Ask Cynthia AI.",
     "",
     "Je peux vous parler :",
@@ -78,11 +77,14 @@ document.addEventListener("DOMContentLoaded", () => {
     "🌟 De mes inspirations",
     "❤️ De la personne que je suis",
     "",
-    "Un profil ne se résume pas uniquement à ce qu'il sait faire.",
+    "Parce qu'un profil ne se résume pas uniquement à ce qu'il sait faire.",
     "",
     "Il raconte aussi qui il est.",
     "",
-    "Que souhaitez-vous découvrir ?"
+    "💡 Essayez :",
+    "\"Pourquoi recruter Cynthia ?\"",
+    "ou",
+    "\"Quel est son rêve ?\""
   ].join("\n");
 
   const profile = {
