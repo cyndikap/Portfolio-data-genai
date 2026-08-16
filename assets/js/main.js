@@ -70,6 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "✅ Mes certifications",
     "✅ Mon experience Azure Databricks",
     "✅ Ma vision du Data Engineering et de l'IA",
+    "✅ La personne derriere l'engineer: valeurs, aspirations et facon de travailler",
     "",
     "Que souhaitez-vous savoir ?"
   ].join("\n");
@@ -88,8 +89,31 @@ document.addEventListener("DOMContentLoaded", () => {
     value: "Valeur ajoutee: transformer des besoins metier en produits Data & IA mesurables, robustes et gouvernes. Elle relie architecture, qualite des donnees, IA generative et impact business.",
     governance: "Expertise Data Governance: Data Quality, MDM, PIM, Syndigo, regles metier et traçabilite. Objectif: fiabiliser la donnee et securiser les usages IA en production.",
     cv: "Vous pouvez demander son CV via le bouton Recevoir mon CV dans la section hero ou contacter Cynthia par email pour un envoi direct: kapnangcynthia@gmail.com.",
-    intro: `${profile.name}\n${profile.title}`
+    intro: `${profile.name}\n${profile.title}`,
+    passions: "Au-dela de la technique, Cynthia est passionnee par les sujets qui relient innovation, impact concret et responsabilite. Elle aime apprendre sur l'IA appliquee, les systemes utiles aux equipes et les initiatives a impact collectif comme Ma Petite Planete.",
+    learning: "Sa facon d'apprendre est tres pratique: elle alterne veille structuree, experimentation sur des mini-projets, puis consolidation via la documentation et des certifications ciblees. Son axe actuel: faire progresser ses competences en architecture agentique, evaluation IA et industrialisation.",
+    dreams: "Son reve professionnel est de construire des produits Data & IA qui deviennent de vrais actifs strategiques pour les organisations: fiables, gouvernes, mesurables et utiles aux utilisateurs finaux. A moyen terme, elle se voit piloter des initiatives IA a fort impact metier.",
+    challenge: "Un des defis qui l'a le plus fait grandir: passer de la realisation technique a la conception de solutions IA deployables de bout en bout, avec gouvernance, qualite de donnees et adoption metier. Cela lui a appris a penser produit autant que technique.",
+    values: "Ses valeurs: curiosite, exigence, esprit d'equipe, transparence et impact utile. Elle choisit la Data et l'IA parce qu'elles permettent de resoudre des problemes concrets, d'ameliorer les decisions et de creer de la valeur durable.",
+    workstyle: "Au quotidien, Cynthia travaille avec une logique claire: cadrer le besoin, prioriser la valeur, iterer vite, puis industrialiser proprement. Elle est souvent plus creative le matin pour la conception, puis orientee execution/collaboration l'apres-midi.",
+    pride: "Sa plus grande fierte professionnelle est de transformer des idees complexes en solutions utilisables en production, avec des resultats mesurables. La reconnaissance Meilleure MPP Player illustre aussi son engagement personnel au-dela du cadre technique.",
+    inspiration: "Cynthia est inspiree par les parcours de resilience, les personnes qui transforment les difficultes en opportunites, et les projets qui combinent technologie, impact humain et valeur durable.",
+    book: "Le livre qui l'a le plus marquee est L'Alchimiste de Paulo Coelho, pour son message sur le courage de suivre sa legende personnelle et de poursuivre ses reves avec perseverance.",
+    motto: "Sa devise: You did it. Une phrase simple qui rappelle la puissance de la perseverance et de la confiance en soi.",
+    beliefs: "Une croyance guide son parcours: les obstacles sont souvent des opportunites de croissance. Avec constance, apprentissage et integrite, les resultats finissent par arriver.",
+    dailyInspiration: "Au quotidien, elle est inspiree par les entrepreneurs a impact, les personnes qui reussissent malgre les obstacles et les initiatives qui utilisent la technologie pour ameliorer la vie des autres.",
+    legacy: "La trace qu'elle souhaite laisser: des solutions utiles qui ameliorent concretement la vie des gens, et une contribution durable a des projets technologiques plus humains, plus responsables et plus inclusifs.",
+    privacy: "Je peux partager des elements professionnels et authentiques sur Cynthia, mais je ne traite pas les sujets trop intimes, familiaux, sensibles ou confidentiels. Je peux en revanche repondre sur ses valeurs, son parcours, ses aspirations et sa facon de travailler."
   };
+
+  const normalize = (text) => {
+    return text
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase();
+  };
+
+  const containsAny = (value, keywords) => keywords.some((keyword) => value.includes(keyword));
 
   const createMessage = (role, text, options = {}) => {
     const wrapper = document.createElement("div");
@@ -175,7 +199,45 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const matchIntent = (input) => {
-    const value = input.toLowerCase();
+    const value = normalize(input);
+
+    if (
+      containsAny(value, [
+        "vie privee",
+        "famille",
+        "mari",
+        "epoux",
+        "copain",
+        "petit ami",
+        "relation amoureuse",
+        "tristesse",
+        "trauma",
+        "depression",
+        "salaire",
+        "adresse",
+        "telephone personnel",
+        "secret",
+        "confidentiel",
+        "politique",
+        "religion"
+      ])
+    ) {
+      return knowledgeBase.privacy;
+    }
+
+    if (containsAny(value, ["passion", "en dehors du travail", "hors travail", "loisir", "centre d'interet", "sujet la passionne"])) return knowledgeBase.passions;
+    if (containsAny(value, ["apprend", "apprentissage", "competence", "developper", "certification la plus marquee", "certification l'a le plus marquee"])) return knowledgeBase.learning;
+    if (containsAny(value, ["reve", "aspiration", "dans quelques annees", "dans 5 ans", "impact souhaite", "type de projet aimerait"])) return knowledgeBase.dreams;
+    if (containsAny(value, ["defi", "moment marquant", "le plus appris", "efforts", "parcours"])) return knowledgeBase.challenge;
+    if (containsAny(value, ["valeur", "philosophie", "important", "pourquoi data", "pourquoi l'ia", "quelles sont ses valeurs"])) return knowledgeBase.values;
+    if (containsAny(value, ["creativ", "organise", "equipe", "travaille", "quotidien", "nouveaux defis", "facon de travailler"])) return knowledgeBase.workstyle;
+    if (containsAny(value, ["fierte", "fiere", "plus grande fierte"])) return knowledgeBase.pride;
+    if (containsAny(value, ["inspire", "inspiration", "qu'est-ce qui inspire", "qui ou quoi l'inspire"])) return knowledgeBase.inspiration;
+    if (containsAny(value, ["livre", "alchimiste", "marquee"])) return knowledgeBase.book;
+    if (containsAny(value, ["devise", "motto", "phrase"])) return knowledgeBase.motto;
+    if (containsAny(value, ["croyance", "conviction", "guide son parcours"])) return knowledgeBase.beliefs;
+    if (containsAny(value, ["au quotidien", "source d'inspiration", "qui l'inspire"])) return knowledgeBase.dailyInspiration;
+    if (containsAny(value, ["trace", "heritage", "laisser", "impact durable", "empreinte"])) return knowledgeBase.legacy;
 
     if (value.includes("pourquoi") || value.includes("recruter") || value.includes("hire")) return knowledgeBase.whyHire;
     if (value.includes("projet") || value.includes("raise") || value.includes("aelon") || value.includes("sav") || value.includes("anthropic")) return knowledgeBase.projects;
@@ -187,7 +249,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (value.includes("cv")) return knowledgeBase.cv;
     if (value.includes("qui") || value.includes("profil") || value.includes("presentation")) return knowledgeBase.intro;
 
-    return "Je peux vous aider sur son parcours, ses projets IA, ses certifications, son experience Databricks, sa specialisation GenAI/RAG/LLM ou son expertise Data Governance/MDM. Dites-moi le sujet qui vous interesse.";
+    return "Je peux vous aider sur son parcours, ses projets IA, ses certifications, son experience Databricks, mais aussi sur la personne derriere le profil: passions, valeurs, aspirations, apprentissage et facon de travailler. Dites-moi le sujet qui vous interesse.";
   };
 
   const requestBackendAnswer = async (question) => {

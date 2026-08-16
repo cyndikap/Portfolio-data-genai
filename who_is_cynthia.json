@@ -1,0 +1,126 @@
+{
+  "who_is_cynthia": {
+    "identity": {
+      "three_words": [
+        "Atypique",
+        "Déterminée",
+        "Ambitieuse"
+      ],
+      "main_quality": "L'empathie",
+      "main_challenge": "Le lâcher-prise. Ma détermination est une force, mais elle me pousse parfois à continuer à me battre là où il faudrait prendre du recul."
+    },
+    "mindset": {
+      "what_makes_her_different": "Mon mindset de conquérante. J'ai tendance à croire que les obstacles sont faits pour être surmontés et que chaque difficulté cache une opportunité d'apprendre.",
+      "life_values": [
+        "La foi",
+        "L'intégrité",
+        "L'impact positif",
+        "La persévérance",
+        "L'entraide"
+      ]
+    },
+    "dreams": {
+      "professional_dream": "Bâtir un empire et contribuer à des projets qui ont un impact durable sur le monde.",
+      "desired_impact": "Utiliser la technologie pour améliorer la vie des gens et laisser les choses dans un meilleur état que celui dans lequel je les ai trouvées.",
+      "ultimate_project": "Créer des orphelinats et des lieux où les enfants se sentent accompagnés, soutenus, aimés et jamais seuls.",
+      "success_definition": "Être heureuse dans ce que je fais tout en ayant un impact positif sur les autres."
+    },
+    "data_ai": {
+      "why_data": "Parce que tout commence par la donnée. Sans donnée de qualité, il ne peut pas y avoir d'intelligence artificielle de qualité.",
+      "why_ai": "Parce que l'intelligence artificielle fait partie du futur et qu'elle a le potentiel de transformer profondément notre manière de vivre et de travailler.",
+      "current_interest": "Comprendre le futur de nos sociétés à travers l'évolution de l'intelligence artificielle.",
+      "technology_vision": "J'aime m'intéresser aux technologies encore peu connues aujourd'hui mais qui pourraient devenir incontournables demain.",
+      "problem_to_solve": "Faciliter le quotidien des humains grâce à des solutions intelligentes et utiles."
+    },
+    "learning": {
+      "favorite_book": {
+        "name": "L'Alchimiste",
+        "author": "Paulo Coelho",
+        "why": "Parce qu'il rappelle l'importance de suivre sa légende personnelle et d'avoir le courage de poursuivre ses rêves."
+      },
+      "learning_style": "J'apprends principalement en construisant, en expérimentant et en me confrontant à des problèmes réels.",
+      "future_skills": "Explorer des domaines encore inconnus aujourd'hui et développer les compétences qui seront utiles demain.",
+      "when_stuck": "Je marche, je vais parfois à la piscine ou j'écoute de la musique relaxante. C'est souvent dans ces moments de calme que les solutions apparaissent."
+    },
+    "pride": {
+      "greatest_personal_pride": "Avoir réussi là où moi-même je pensais que je n'y arriverais pas.",
+      "greatest_professional_pride": "Mon évolution continue jusqu'à devenir AI & Data Engineer et ma capacité à résoudre seule des problématiques complexes.",
+      "meaningful_feedback": "Un collègue m'a décrite comme ambitieuse, solide techniquement et capable de prendre davantage de leadership."
+    },
+    "growth": {
+      "biggest_challenge": "Apprendre à surmonter le décès de mon frère.",
+      "message_to_younger_self": "Continue à travailler, continue à croire en toi. Tout se passera bien.",
+      "life_lesson": "J'ai appris que je suis une battante et que je suis capable d'aller plus loin que ce que j'imaginais."
+    },
+    "work_style": {
+      "most_creative_time": "Entre minuit et deux heures du matin lorsque tout est calme et que les idées circulent librement.",
+      "ideal_company": "Une entreprise qui crée de la valeur, innove et donne la possibilité de grandir tout en ayant un impact concret.",
+      "next_role": "Un poste mêlant Data Engineering, IA, innovation, apprentissage continu et résolution de problèmes complexes."
+    },
+    "passions": {
+      "outside_work": [
+        "Lecture",
+        "Natation",
+        "Balades",
+        "Danse",
+        "Musique relaxante"
+      ],
+      "favorite_topics": [
+        "Développement personnel",
+        "Apprentissage",
+        "Psychologie de la réussite",
+        "Construction de soi"
+      ]
+    },
+    "inspirations": {
+      "favorite_book": {
+        "name": "L'Alchimiste",
+        "author": "Paulo Coelho",
+        "why": "Parce qu'il rappelle l'importance de suivre sa légende personnelle et d'avoir le courage de poursuivre ses rêves."
+      },
+      "guiding_beliefs": [
+        "Les obstacles sont souvent des opportunités déguisées.",
+        "La persévérance finit par produire des résultats.",
+        "Les bonnes actions ont de la valeur même lorsqu'elles ne sont pas visibles.",
+        "On est souvent capable de beaucoup plus que ce que l'on imagine."
+      ],
+      "sources_of_inspiration": [
+        "Les personnes qui réussissent malgré les difficultés.",
+        "Les entrepreneurs qui construisent un impact durable.",
+        "Les personnes qui utilisent la technologie pour améliorer la vie des autres.",
+        "Les parcours de résilience et de transformation."
+      ],
+      "future_inspiration": "Construire des projets qui combinent technologie, impact humain et création de valeur durable."
+    },
+    "fun_facts": [
+      "Je suis souvent la plus créative entre minuit et deux heures du matin.",
+      "J'aime réfléchir en marchant.",
+      "La natation m'aide à débloquer des problèmes complexes.",
+      "J'aime découvrir des technologies peu connues aujourd'hui mais prometteuses demain."
+    ],
+    "recruiter_insights": {
+      "why_hire_cynthia": "Recruter Cynthia, ce n'est pas seulement recruter une AI & Data Engineer. C'est recruter une personne curieuse, déterminée et capable d'apprendre rapidement. Elle ne prétend pas tout savoir, mais elle est convaincue qu'avec de la persévérance, de la rigueur et l'envie de progresser, chaque défi devient une opportunité d'apprendre, d'innover et de créer de la valeur.",
+      "added_value": "Ma valeur ajoutée repose sur la combinaison entre compétences techniques, curiosité, persévérance et compréhension des enjeux métier. J'aime transformer des problématiques complexes en solutions concrètes et utiles.",
+      "what_i_seek": "Je recherche un environnement où je peux continuer à apprendre, construire des solutions utiles, relever des défis techniques et créer de la valeur grâce à la Data et à l'IA.",
+      "ideal_environment": "Un environnement qui favorise l'apprentissage, l'autonomie, l'innovation et la création de valeur.",
+      "leadership_style": "J'aime montrer l'exemple par l'action, prendre des initiatives et encourager les autres à progresser."
+    },
+    "quotes": {
+      "personal_motto": "You did it.",
+      "life_philosophy": "Nous sommes souvent capables de beaucoup plus que ce que nous pensons.",
+      "work_philosophy": "Chaque défi est une opportunité d'apprendre, de progresser et de créer de la valeur."
+    },
+    "rapid_questions": [
+      "Pourquoi recruter Cynthia ?",
+      "Quelle est sa valeur ajoutée ?",
+      "Quel est son rêve ?",
+      "Quelles sont ses valeurs ?",
+      "Comment apprend-elle ?",
+      "Quelle est sa plus grande fierté ?",
+      "Qu'est-ce qui l'inspire ?",
+      "À quel moment est-elle la plus créative ?",
+      "Pourquoi a-t-elle choisi l'IA ?",
+      "Quelles sont ses passions ?"
+    ]
+  }
+}
