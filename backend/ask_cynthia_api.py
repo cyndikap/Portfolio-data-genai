@@ -118,8 +118,10 @@ def build_knowledge(profile: dict[str, Any]) -> dict[str, str]:
             "tracabilite. Objectif: fiabiliser la donnee et securiser les usages IA en production."
         ),
         "cv": (
-            "Vous pouvez demander son CV via le bouton Recevoir mon CV dans la section hero ou "
-            "contacter Cynthia par email: kapnangcynthia@gmail.com."
+            "📄 Bien sûr !\n\n"
+            "Vous pouvez consulter ou télécharger mon CV ici :\n"
+            "/cv/CV_Cynthia_Sileu_Kapnang.pdf\n\n"
+            "Vous pouvez également découvrir mes projets et mon expérience en continuant à échanger avec moi."
         ),
         "passions": (
             _as_text(passions.get("outside_work"))
@@ -209,6 +211,30 @@ def contains_any(value: str, keywords: List[str]) -> bool:
     return any(keyword in value for keyword in keywords)
 
 
+def is_cv_request(value: str) -> bool:
+    return contains_any(
+        value,
+        [
+            "cv",
+            "telecharger le cv",
+            "puis-je voir votre cv",
+            "puis je voir votre cv",
+            "envoyez-moi votre cv",
+            "envoyez moi votre cv",
+            "je souhaite consulter votre cv",
+            "ou trouver votre cv",
+            "puis-je telecharger votre cv",
+            "puis je telecharger votre cv",
+            "pouvez-vous me transmettre votre cv",
+            "pouvez vous me transmettre votre cv",
+            "montrez-moi votre cv",
+            "montrez moi votre cv",
+            "telecharger son cv",
+            "consulter son cv",
+        ],
+    )
+
+
 def match_intent(user_input: str) -> str:
     value = normalize(user_input)
 
@@ -277,7 +303,7 @@ def match_intent(user_input: str) -> str:
         return KNOWLEDGE["value"]
     if any(k in value for k in ["governance", "gouvernance", "mdm", "pim", "syndigo", "quality"]):
         return KNOWLEDGE["governance"]
-    if "cv" in value:
+    if is_cv_request(value):
         return KNOWLEDGE["cv"]
     if any(k in value for k in ["qui", "profil", "presentation"]):
         return KNOWLEDGE["intro"]

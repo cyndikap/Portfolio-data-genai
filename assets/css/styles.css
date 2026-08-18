@@ -988,6 +988,46 @@ tr th {
   background: #FFFFFF;
 }
 
+.ask-ai-cv-bubble {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.ask-ai-cv-line,
+.ask-ai-cv-path {
+  margin: 0;
+}
+
+.ask-ai-cv-path {
+  font-size: 0.78rem;
+  color: var(--text-soft);
+}
+
+.ask-ai-cv-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.ask-ai-cv-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 120, 212, 0.3);
+  border-radius: 999px;
+  padding: 0.32rem 0.7rem;
+  font-size: 0.78rem;
+  color: var(--secondary);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.ask-ai-cv-link:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #FFFFFF;
+}
+
 .ask-ai-suggestions {
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);

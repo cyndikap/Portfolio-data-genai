@@ -58,6 +58,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const storageKey = "ask-cynthia-ai-history";
   const askAiEndpoint = (document.body.dataset.askAiEndpoint || window.ASK_CYNTHIA_AI_ENDPOINT || "").trim();
+  const cvFileRelativePath = "cv/CV_Cynthia_Sileu_Kapnang.pdf";
+  const cvFileDisplayPath = "/cv/CV_Cynthia_Sileu_Kapnang.pdf";
   const welcomeMessage = [
     "👋 Bonjour !",
     "Je suis Ask Cynthia AI.",
@@ -68,20 +70,19 @@ document.addEventListener("DOMContentLoaded", () => {
     "🏆 De mes certifications",
     "💻 De mes compétences",
     "☁️ De mon expérience Databricks",
+    "🤖 De mon parcours Data & IA",
+    "📄 De mon CV",
     "",
     "mais aussi :",
     "",
-    "💬 De mes valeurs",
+    "❤️ De mes valeurs",
     "🌱 De mes passions",
     "🚀 De mes ambitions",
     "🌟 De mes inspirations",
-    "❤️ De la personne que je suis",
-    "",
-    "Parce qu'un profil ne se résume pas uniquement à ce qu'il sait faire.",
-    "",
-    "Il raconte aussi qui il est.",
     "",
     "💡 Essayez :",
+    "\"📄 Télécharger mon CV\"",
+    "ou",
     "\"Pourquoi recruter Cynthia ?\"",
     "ou",
     "\"Quel est son rêve ?\""
@@ -100,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
     certifications: "Certifications: Databricks Fundamentals Accreditation, AI Practitioner, AI Explorer, Syndigo PIM & MDM, Microsoft Power BI Data Analyst Associate.",
     value: "Valeur ajoutee: transformer des besoins metier en produits Data & IA mesurables, robustes et gouvernes. Elle relie architecture, qualite des donnees, IA generative et impact business.",
     governance: "Expertise Data Governance: Data Quality, MDM, PIM, Syndigo, regles metier et traçabilite. Objectif: fiabiliser la donnee et securiser les usages IA en production.",
-    cv: "Vous pouvez demander son CV via le bouton Recevoir mon CV dans la section hero ou contacter Cynthia par email pour un envoi direct: kapnangcynthia@gmail.com.",
+    cv: "📄 Bien sûr !\n\nVous pouvez consulter ou télécharger mon CV ici :\n/cv/CV_Cynthia_Sileu_Kapnang.pdf\n\nVous pouvez également découvrir mes projets et mon expérience en continuant à échanger avec moi.",
     intro: `${profile.name}\n${profile.title}`,
     passions: "Au-dela de la technique, Cynthia est passionnee par les sujets qui relient innovation, impact concret et responsabilite. Elle aime apprendre sur l'IA appliquee, les systemes utiles aux equipes et les initiatives a impact collectif comme Ma Petite Planete.",
     learning: "Sa facon d'apprendre est tres pratique: elle alterne veille structuree, experimentation sur des mini-projets, puis consolidation via la documentation et des certifications ciblees. Son axe actuel: faire progresser ses competences en architecture agentique, evaluation IA et industrialisation.",
@@ -127,6 +128,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const containsAny = (value, keywords) => keywords.some((keyword) => value.includes(keyword));
 
+  const cvKeywords = [
+    "cv",
+    "telecharger le cv",
+    "puis-je voir votre cv",
+    "puis je voir votre cv",
+    "envoyez-moi votre cv",
+    "envoyez moi votre cv",
+    "je souhaite consulter votre cv",
+    "ou trouver votre cv",
+    "puis-je telecharger votre cv",
+    "puis je telecharger votre cv",
+    "pouvez-vous me transmettre votre cv",
+    "pouvez vous me transmettre votre cv",
+    "montrez-moi votre cv",
+    "montrez moi votre cv",
+    "telecharger son cv",
+    "consulter son cv"
+  ];
+
+  const isCvRequest = (input) => {
+    const value = normalize(input);
+    return containsAny(value, cvKeywords);
+  };
+
   const createMessage = (role, text, options = {}) => {
     const wrapper = document.createElement("div");
     wrapper.className = `ask-ai-message ${role}`;
@@ -142,6 +167,56 @@ document.addEventListener("DOMContentLoaded", () => {
       saveHistory();
     }
 
+    scrollToBottom();
+    return bubble;
+  };
+
+  const createCvMessage = () => {
+    const wrapper = document.createElement("div");
+    wrapper.className = "ask-ai-message assistant";
+
+    const bubble = document.createElement("div");
+    bubble.className = "ask-ai-bubble ask-ai-cv-bubble";
+
+    const intro = document.createElement("p");
+    intro.className = "ask-ai-cv-line";
+    intro.textContent = "📄 Bien sûr !";
+
+    const helpText = document.createElement("p");
+    helpText.className = "ask-ai-cv-line";
+    helpText.textContent = "Vous pouvez consulter ou télécharger mon CV ici :";
+
+    const actions = document.createElement("div");
+    actions.className = "ask-ai-cv-actions";
+
+    const openLink = document.createElement("a");
+    openLink.className = "ask-ai-cv-link";
+    openLink.href = cvFileRelativePath;
+    openLink.target = "_blank";
+    openLink.rel = "noopener";
+    openLink.textContent = "📄 Ouvrir mon CV";
+
+    const downloadLink = document.createElement("a");
+    downloadLink.className = "ask-ai-cv-link";
+    downloadLink.href = cvFileRelativePath;
+    downloadLink.setAttribute("download", "CV_Cynthia_Sileu_Kapnang.pdf");
+    downloadLink.textContent = "📥 Télécharger mon CV";
+
+    actions.append(openLink, downloadLink);
+
+    const pathLine = document.createElement("p");
+    pathLine.className = "ask-ai-cv-path";
+    pathLine.textContent = `Lien : ${cvFileDisplayPath}`;
+
+    const outro = document.createElement("p");
+    outro.className = "ask-ai-cv-line";
+    outro.textContent = "Vous pouvez également découvrir mes projets et mon expérience en continuant à échanger avec moi.";
+
+    bubble.append(intro, helpText, actions, pathLine, outro);
+    wrapper.appendChild(bubble);
+    askAiBody.appendChild(wrapper);
+
+    saveHistory();
     scrollToBottom();
     return bubble;
   };
@@ -291,7 +366,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (value.includes("certif") || value.includes("accredit") || value.includes("diplome")) return knowledgeBase.certifications;
     if (value.includes("valeur") || value.includes("impact") || value.includes("apport")) return knowledgeBase.value;
     if (value.includes("governance") || value.includes("gouvernance") || value.includes("mdm") || value.includes("pim") || value.includes("syndigo") || value.includes("quality")) return knowledgeBase.governance;
-    if (value.includes("cv")) return knowledgeBase.cv;
+    if (isCvRequest(value)) return knowledgeBase.cv;
     if (value.includes("qui") || value.includes("profil") || value.includes("presentation")) return knowledgeBase.intro;
 
     return "Je peux vous aider sur son parcours, ses projets IA, ses certifications, son experience Databricks, mais aussi sur la personne derriere le profil: passions, valeurs, aspirations, apprentissage et facon de travailler. Dites-moi le sujet qui vous interesse.";
@@ -338,11 +413,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const answerQuestion = async (question) => {
     createMessage("user", question);
     const typingNode = showTyping();
+    const shouldShowCvCard = isCvRequest(question);
 
     const backendAnswer = await requestBackendAnswer(question);
 
     window.setTimeout(() => {
       typingNode.remove();
+      if (shouldShowCvCard) {
+        createCvMessage();
+        return;
+      }
+
       createMessage("assistant", backendAnswer || matchIntent(question));
     }, backendAnswer ? 280 : 650);
   };
