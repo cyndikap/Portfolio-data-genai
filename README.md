@@ -95,27 +95,49 @@ Mon expertise couvre la mise en place de pipelines data et IA, l'industrialisati
 
 ### Projet AELON
 **Objectif**
-- Concevoir une plateforme bancaire intelligente en 3 espaces, pensée pour offrir une expérience premium et cloisonnée selon les profils utilisateurs.
+- Concevoir une plateforme intelligente de service après-vente bancaire capable d'assister les utilisateurs, d'exploiter les conversations et de piloter la performance des agents IA dans une logique produit orientée métier.
 
 **Problématique**
-- Orchestrer plusieurs agents IA spécialisés tout en conservant performance, fiabilité, sécurité et conformité dans un contexte bancaire sensible.
+- Répondre à des demandes bancaires à partir d'un corpus documentaire métier fiable, tout en transformant les conversations en indicateurs analytiques, en signaux de gouvernance et en leviers d'aide à la décision pour les équipes métier.
 
-**Description fonctionnelle et technique**
-- Customer Banking Assistant pour le client bancaire, Analytics Copilot pour le Business Analyst, et AI Governance Copilot pour le Data Steward.
-- Backend FastAPI compatible avec les routes existantes, front web moderne et orchestrateur multi-agent.
-- Masquage des données sensibles dans le chat client, avec exploitation des interactions dans les espaces Analytics et Governance pour générer KPI, tableaux de bord exécutifs, exports CSV/PDF et indicateurs d'observabilité.
+**Description courte**
+- AELON est une plateforme bancaire intelligente qui répond aux questions des utilisateurs à partir d'un corpus documentaire métier et d'un pipeline RAG adossé au Databricks Lakehouse.
+- Les conversations sont valorisées comme une source de données à part entière pour produire des indicateurs analytiques, alimenter des dashboards de gouvernance et mesurer la performance des agents IA.
+- La solution combine assistance bancaire conversationnelle, architecture multi-agents, recherche vectorielle, gouvernance des données et évaluation continue dans un même produit.
+- Le projet est pensé comme une plateforme complète d'aide à la décision et non comme un simple chatbot bancaire.
+
+**Description complète**
+- Contexte métier : moderniser le service après-vente bancaire, fiabiliser l'accès à la connaissance métier et accélérer le traitement des demandes récurrentes ou sensibles.
+- Problématiques adressées : recherche documentaire intelligente, supervision des agents IA, détection de fraude, exploitation analytique des conversations et gouvernance des données dans un cadre réglementé.
+- Architecture globale : utilisateur, Banking Chat, architecture multi-agents, RAG, Databricks Lakehouse, Gold Conversations, Analytics, Governance, Evaluation.
+- Technologies : Python, Databricks, Delta Lake, Unity Catalog, Databricks Vector Search, SQL, PySpark, FastAPI, HTML/CSS/JavaScript, IA Générative, RAG, Multi-Agent Systems.
+- Résultats : forte robustesse du retrieval, couverture documentaire complète et fondations solides pour l'amélioration continue des agents IA et de la décision métier.
+- Valeur ajoutée : AELON relie expérience conversationnelle, architecture data, gouvernance et analytics dans une plateforme bancaire IA de bout en bout.
+
+**Fonctionnalités principales**
+- Assistance bancaire conversationnelle.
+- Recherche documentaire intelligente.
+- Databricks Vector Search.
+- Architecture Multi-Agents.
+- Détection de fraude.
+- Analyse des conversations.
+- Dashboards Analytics.
+- Dashboards Governance.
+- Evaluation continue des agents IA.
+- Aide à la décision métier.
 
 **Technologies**
-- Azure OpenAI, RAG, FastAPI, Python, architecture multi-agents, observabilité IA, dashboards métier.
+- Python, Databricks, Delta Lake, Unity Catalog, Databricks Vector Search, SQL, PySpark, FastAPI, HTML/CSS/JavaScript, IA Générative, RAG, Multi-Agent Systems.
 
 **Résultats obtenus**
-- Mise en place d'une architecture modulaire d'agents.
-- Meilleure précision des réponses via contextualisation RAG.
-- Accélération de la conception de cas d'usage IA côté métier.
-- Meilleure gouvernance, sécurité et traçabilité des interactions.
+- Retrieval Success Rate : 100 % - toutes les requêtes testées ont retrouvé un contexte exploitable.
+- Source Match Rate : 100 % - les documents retournés correspondaient aux bonnes sources métier.
+- Category Coverage : 100 % - toutes les catégories cibles ont été couvertes par le retrieval.
+- Keyword Match Rate : 62,5 % - le matching lexical reste améliorable et confirme l'intérêt du retrieval sémantique.
+- Category Match Rate : 50 % - la classification métier peut encore être renforcée pour améliorer l'aiguillage des demandes.
 
 **Compétences mobilisées**
-- GenAI Engineering, API Engineering, architecture applicative, prompt engineering.
+- Data Engineering, architecture Lakehouse, data governance, Retrieval-Augmented Generation, recherche vectorielle, développement IA, analyse de données, visualisation, monitoring, évaluation des systèmes IA.
 
 **Agents conçus (AELON)**
 
@@ -180,6 +202,17 @@ flowchart TD
 - Performance: faible latence de reponse et traitement efficace.
 - Maintenabilite: architecture modulaire multi-agents.
 - Gouvernance: tracabilite, auditabilite, explicabilite et supervision continue.
+
+**Architecture synthétique**
+- Utilisateur
+- Banking Chat
+- Architecture Multi-Agents
+- RAG
+- Databricks Lakehouse
+- Gold Conversations
+- Analytics
+- Governance
+- Evaluation
 
 **Architecture Data Engineering (Databricks Lakehouse)**
 - Bronze: donnees brutes (conversations, logs, evenements, sorties agents).
