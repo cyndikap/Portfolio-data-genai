@@ -58,8 +58,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const storageKey = "ask-cynthia-ai-history";
   const askAiEndpoint = (document.body.dataset.askAiEndpoint || window.ASK_CYNTHIA_AI_ENDPOINT || "").trim();
-  const cvFileRelativePath = "cv/CV_Cynthia_Sileu_Kapnang.pdf";
-  const cvFileDisplayPath = "/cv/CV_Cynthia_Sileu_Kapnang.pdf";
+  const cvFileRelativePath = "cv/Cynthia Sileu Kapnang - Data & IA Officer.pdf";
+  const cvFileDisplayPath = "/cv/Cynthia Sileu Kapnang - Data & IA Officer.pdf";
   const welcomeMessage = [
     "👋 Bonjour !",
     "Je suis Ask Cynthia AI.",
@@ -98,10 +98,10 @@ document.addEventListener("DOMContentLoaded", () => {
     projects: "Elle a travaille sur RAISE, AELON, SAV GENIA, Data Quality IA et Hackathon Anthropic. Cas d'usage: RAG/LLM, orchestration multi-agent, evaluation IA, gouvernance et industrialisation sur Databricks.",
     databricks: "Experience Azure Databricks sur pipelines PySpark, orchestration IA, MLflow, Unity Catalog, model lifecycle, data governance et passage a l'echelle en environnement enterprise.",
     rag: "Oui. Cynthia travaille concretement sur RAG, LLM et Agentic AI: architecture de retrieval, evaluation des reponses, gouvernance des modeles et integration metier.",
-    certifications: "Certifications: Databricks Fundamentals Accreditation, AI Practitioner, AI Explorer, Syndigo PIM & MDM, Microsoft Power BI Data Analyst Associate.",
+    certifications: "Certifications: Databricks Certified Generative AI Engineer Associate, Databricks Certified Data Engineer Associate, Databricks Fundamentals Accreditation, AI Practitioner, AI Explorer, Syndigo PIM & MDM, Microsoft Power BI Data Analyst Associate.",
     value: "Valeur ajoutee: transformer des besoins metier en produits Data & IA mesurables, robustes et gouvernes. Elle relie architecture, qualite des donnees, IA generative et impact business.",
     governance: "Expertise Data Governance: Data Quality, MDM, PIM, Syndigo, regles metier et traçabilite. Objectif: fiabiliser la donnee et securiser les usages IA en production.",
-    cv: "📄 Bien sûr !\n\nVous pouvez consulter ou télécharger mon CV ici :\n/cv/CV_Cynthia_Sileu_Kapnang.pdf\n\nVous pouvez également découvrir mes projets et mon expérience en continuant à échanger avec moi.",
+    cv: "📄 Bien sûr !\n\nVous pouvez consulter ou télécharger mon CV ici :\n/cv/Cynthia Sileu Kapnang - Data & IA Officer.pdf\n\nVous pouvez également découvrir mes projets et mon expérience en continuant à échanger avec moi.",
     intro: `${profile.name}\n${profile.title}`,
     passions: "Au-dela de la technique, Cynthia est passionnee par les sujets qui relient innovation, impact concret et responsabilite. Elle aime apprendre sur l'IA appliquee, les systemes utiles aux equipes et les initiatives a impact collectif comme Ma Petite Planete.",
     learning: "Sa facon d'apprendre est tres pratique: elle alterne veille structuree, experimentation sur des mini-projets, puis consolidation via la documentation et des certifications ciblees. Son axe actuel: faire progresser ses competences en architecture agentique, evaluation IA et industrialisation.",
@@ -199,7 +199,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const downloadLink = document.createElement("a");
     downloadLink.className = "ask-ai-cv-link";
     downloadLink.href = cvFileRelativePath;
-    downloadLink.setAttribute("download", "CV_Cynthia_Sileu_Kapnang.pdf");
+    downloadLink.setAttribute("download", "Cynthia Sileu Kapnang - Data & IA Officer.pdf");
     downloadLink.textContent = "📥 Télécharger mon CV";
 
     actions.append(openLink, downloadLink);

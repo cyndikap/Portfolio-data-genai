@@ -104,7 +104,9 @@ def build_knowledge(profile: dict[str, Any]) -> dict[str, str]:
               "retrieval, evaluation des reponses, gouvernance des modeles et integration metier."
         ),
         "certifications": (
-            "Certifications: Databricks Fundamentals Accreditation, AI Practitioner, AI Explorer, "
+            "Certifications: Databricks Certified Generative AI Engineer Associate, "
+            "Databricks Certified Data Engineer Associate, "
+            "Databricks Fundamentals Accreditation, AI Practitioner, AI Explorer, "
             "Syndigo PIM & MDM, Microsoft Power BI Data Analyst Associate."
         ),
         "value": recruiter.get("added_value") or (
@@ -120,7 +122,7 @@ def build_knowledge(profile: dict[str, Any]) -> dict[str, str]:
         "cv": (
             "📄 Bien sûr !\n\n"
             "Vous pouvez consulter ou télécharger mon CV ici :\n"
-            "/cv/CV_Cynthia_Sileu_Kapnang.pdf\n\n"
+            "/cv/Cynthia Sileu Kapnang - Data & IA Officer.pdf\n\n"
             "Vous pouvez également découvrir mes projets et mon expérience en continuant à échanger avec moi."
         ),
         "passions": (

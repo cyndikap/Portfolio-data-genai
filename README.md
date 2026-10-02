@@ -353,6 +353,17 @@ flowchart LR
 - **Description** : fondamentaux de la plateforme Databricks et de l'approche Lakehouse.
 - **Compétences validées** : Spark ecosystem, architecture Lakehouse, bonnes pratiques Databricks.
 
+### Databricks Certified Data Engineer Associate
+[![Databricks Certified](https://img.shields.io/badge/Databricks-Certified_Data_Engineer_Associate-FF3621?style=flat-square&logo=databricks&logoColor=white)](https://credentials.databricks.com/832330c4-1c6d-4fa8-ad1f-9b59ec9b5ca7#acc.7JcbXPrI)
+- **Validité** : délivrée le 26 septembre 2026, expiration le 26 septembre 2028.
+- **Lien de vérification** : [Databricks Credentials](https://credentials.databricks.com/832330c4-1c6d-4fa8-ad1f-9b59ec9b5ca7#acc.7JcbXPrI)
+
+### Databricks Certified Generative AI Engineer Associate
+[![Databricks Certified](https://img.shields.io/badge/Databricks-Certified_Generative_AI_Engineer_Associate-FF3621?style=flat-square&logo=databricks&logoColor=white)](https://credentials.databricks.com/e55a2e3d-3d9a-47ed-bb42-1b81e8c3f4e1#acc.dp3M2Xv7)
+- **Compétences validées** : Generative AI, Vector Search, Model Serving, MLflow, Unity Catalog, applications RAG et chaînes LLM.
+- **Validité** : délivrée le 22 septembre 2026, expiration le 22 septembre 2028.
+- **Lien de vérification** : [Databricks Credentials](https://credentials.databricks.com/e55a2e3d-3d9a-47ed-bb42-1b81e8c3f4e1#acc.dp3M2Xv7)
+
 ### AI Practitioner - IA Générative & Agents IA (2026)
 ![AI Practitioner](https://img.shields.io/badge/AI_Practitioner-GenAI_%26_Agents-163A70?style=flat-square&logo=openai&logoColor=white)
 - **Description** : conception de solutions d'IA générative orientées production.
